@@ -1,0 +1,60 @@
+{{ define "main" }}
+    <main class="post">
+
+        <div class="post-info">
+            {{ if .IsTranslated }}
+                {{ i18n "postAvailable" }}
+                {{ range .Translations }}
+                    <a href="{{ .Permalink }}"><span class="flag fi fi-{{ index $.Site.Data.langFlags (.Lang) }}"></span></a>
+                {{ end}}
+            {{ end }}
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
+
+            {{ if .Params.Cover }}
+                <figure class="post-cover">
+                    <img src="{{ .Params.Cover | absURL }}" alt="{{ .Title }}" />
+
+                    {{ if .Params.CoverCaption }}
+                        <figcaption class="center">{{ .Params.CoverCaption | markdownify }}</figcaption>
+                    {{ end }}
+                </figure>
+            {{ end }}
+
+            {{ if .Params.toc }}
+                <hr />
+                <aside id="toc">
+                    <div class="toc-title">{{ i18n "tableOfContents" }}</div>
+                    {{ .TableOfContents }}
+                </aside>
+                <hr />
+            {{ end }}
+
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            {{ partial "tags.html" .Params.tags }}
+
+            <!-- On n'affiche pas les catégories si c'est content/contact.md -->
+            {{ if ne .File.Path "content/contact.md" }}
+                {{ partial "categories.html" . }}
+            {{ end }}
+
+            {{- if .GitInfo }}
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <!-- Ton code SVG si besoin -->
+                    </svg>
+                </p>
+            {{- end }}
+        </div>
+    </main>
+{{ end }}

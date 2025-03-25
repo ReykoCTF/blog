@@ -1,0 +1,25 @@
+<a href="{{ .Site.BaseURL }}" style="text-decoration: none;">
+  <div class="logo" style="display: flex; align-items: center;">
+    <span class="logo__mark" style="margin-right: 5px;">&gt;</span>
+    <span class="logo__text typewriter" id="typewriter"></span>
+    <span class="logo__cursor" style="background-color: #999;"></span>
+  </div>
+</a>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const text = "Reyko";
+    const target = document.getElementById("typewriter");
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        target.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 120);
+      }
+    }
+
+    type();
+  });
+</script>

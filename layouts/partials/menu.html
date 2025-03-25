@@ -1,0 +1,12 @@
+<nav class="menu">
+  {{ $currentPage := . }}
+  {{ range sort .Site.Menus.main "Weight" }}
+    <a 
+      class="menu__item{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} menu__item--active{{ end }}" 
+      href="{{ .URL | relLangURL }}"
+      title="{{ .Title }}"
+    >
+      {{ .Name }}
+    </a>
+  {{ end }}
+</nav>
