@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crypto on Blog de Reyko</title>
+    <link>http://localhost:1313/writeups/categories/crypto/</link>
+    <description>Recent content in Crypto on Blog de Reyko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/writeups/categories/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kashi CTF 2025 : Key Exchange | Crypto</title>
+      <link>http://localhost:1313/writeups/kashi-2025-keyexchange/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/kashi-2025-keyexchange/</guid>
+      <description>Solve.py
+from pwn import * import hashlib from Crypto.Cipher import AES import json import re Gx = 26247035095799689268623156744566981891852923491109213387815615900925518854738050089022388053975719786650872476732087 Gy = 8325710961489029985546751289520108179287853048861315594709205902480503199884419224438643760392947333078086511627871 def solve(): conn = remote(&amp;#39;kashictf.iitbhucybersec.in&amp;#39;, 54203) pk_pattern = re.compile(r&amp;#34;Public Key:\s*\(?\s*(\d+)\s*,\s*(\d+)\s*\)?&amp;#34;) while True: line = conn.recvline(timeout=2).decode() if &amp;#34;And my Public Key&amp;#34; in line: match = pk_pattern.search(line) if match: PAx, PAy = map(int, match.groups()) break elif not line: raise Exception(&amp;#34;Serveur injoignable ou format inattendu&amp;#34;) conn.sendlineafter(b&amp;#39;x-coord: &amp;#39;, str(Gx).encode()) conn.sendlineafter(b&amp;#39;y-coord: &amp;#39;, str(Gy).encode()) encrypted_msg = conn.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writeups on Blog de Reyko</title>
+    <link>http://localhost:1313/writeups/</link>
+    <description>Recent content in Writeups on Blog de Reyko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kashi CTF 2025 : Corruption | Forensics</title>
+      <link>http://localhost:1313/writeups/kashi-2025-corruption/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/kashi-2025-corruption/</guid>
+      <description>Photorec on the file
+Then :
+find . -type f -exec strings {} \; | grep -E &amp;#39;.*Kashi.*&amp;#39; </description>
+    </item>
+    
+    <item>
+      <title>Kashi CTF 2025 : Do Not Redeem #1 | Forensics</title>
+      <link>http://localhost:1313/writeups/kashi-2025-donotredeem/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/kashi-2025-donotredeem/</guid>
+      <description>Find the message DB :
+[Feb 23, 2025 - 10:22:53 (CET)] exegol-fofo kitler # find . -type f -exec sh -c &amp;#39;echo &amp;#34;File: $1&amp;#34;; strings &amp;#34;$1&amp;#34;&amp;#39; _ {} \; | grep -E &amp;#39;.*mmssms.db.*&amp;#39; File: ./data/data/com.android.providers.telephony/databases/mmssms.db-journal File: ./data/data/com.android.providers.telephony/databases/mmssms.db ce.cm.notify_mmssms_db_lost ce.cm.notify_mmssms_db_losttrue* File: ./data/user/0/com.android.providers.telephony/databases/mmssms.db-journal File: ./data/user/0/com.android.providers.telephony/databases/mmssms.db ce.cm.notify_mmssms_db_lost ce.cm.notify_mmssms_db_losttrue* File: ./data/user_de/0/com.android.providers.telephony/databases/mmssms.db-journal File: ./data/user_de/0/com.android.providers.telephony/databases/mmssms.db mmssms.db mmssms.db.txt File: ./data_mirror/data_ce/null/0/com.android.providers.telephony/databases/mmssms.db-journal File: ./data_mirror/data_ce/null/0/com.android.providers.telephony/databases/mmssms.db ce.cm.notify_mmssms_db_lost ce.cm.notify_mmssms_db_losttrue* File: ./data_mirror/data_de/null/0/com.android.providers.telephony/databases/mmssms.db-journal File: ./data_mirror/data_de/null/0/com.android.providers.telephony/databases/mmssms.db mmssms.db is the classic db where we can find messages.</description>
+    </item>
+    
+    <item>
+      <title>Kashi CTF 2025 : Key Exchange | Crypto</title>
+      <link>http://localhost:1313/writeups/kashi-2025-keyexchange/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/kashi-2025-keyexchange/</guid>
+      <description>Solve.py
+from pwn import * import hashlib from Crypto.Cipher import AES import json import re Gx = 26247035095799689268623156744566981891852923491109213387815615900925518854738050089022388053975719786650872476732087 Gy = 8325710961489029985546751289520108179287853048861315594709205902480503199884419224438643760392947333078086511627871 def solve(): conn = remote(&amp;#39;kashictf.iitbhucybersec.in&amp;#39;, 54203) pk_pattern = re.compile(r&amp;#34;Public Key:\s*\(?\s*(\d+)\s*,\s*(\d+)\s*\)?&amp;#34;) while True: line = conn.recvline(timeout=2).decode() if &amp;#34;And my Public Key&amp;#34; in line: match = pk_pattern.search(line) if match: PAx, PAy = map(int, match.groups()) break elif not line: raise Exception(&amp;#34;Serveur injoignable ou format inattendu&amp;#34;) conn.sendlineafter(b&amp;#39;x-coord: &amp;#39;, str(Gx).encode()) conn.sendlineafter(b&amp;#39;y-coord: &amp;#39;, str(Gy).encode()) encrypted_msg = conn.</description>
+    </item>
+    
+    <item>
+      <title>Kashi CTF 2025 : kings | OSINT</title>
+      <link>http://localhost:1313/writeups/kashi-2025-kings/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/kashi-2025-kings/</guid>
+      <description>Clues:
+A photograph of a dagger/knife. The title &amp;ldquo;Kings&amp;rdquo; in plural, suggesting the challenge will involve multiple kings. The statement: &amp;ldquo;cosmic weapons&amp;rdquo; &amp;ldquo;example of such weapons on the net&amp;rdquo; &amp;ldquo;This ruler&amp;rsquo;s court artist&amp;rdquo; &amp;ldquo;drew the most accurate painting of a now extinct bird&amp;rdquo; Approach:
+Reverse Image Search:
+A reverse image search reveals that this dagger, made of cosmic materials, belonged to Tutankhamun, an Egyptian king. Research on the Extinct Bird:</description>
+    </item>
+    
+    <item>
+      <title>Kashi CTF 2025 : Memories Bring Back You | Forensics</title>
+      <link>http://localhost:1313/writeups/kashi-2025-memories/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/kashi-2025-memories/</guid>
+      <description>Just a grep :)
+strings chall | grep KashiCTF{ Flag : KashiCTF{DF1R_g03555_Brrrr} </description>
+    </item>
+    
+    <item>
+      <title>Kashi CTF 2025 : Selfe Destruct | Forensics</title>
+      <link>http://localhost:1313/writeups/kashi-2025-selfdestruct/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/kashi-2025-selfdestruct/</guid>
+      <description>Photorec on the vdi
+then :
+[Feb 22, 2025 - 18:31:26 (CET)] exegol-fofo selfe # find recup_dir.* -type f -exec strings {} \; | grep -E &amp;#39;.*fLaG Part.* grep -rs &amp;#34;fLaG Part &amp;#34; / &amp;#39;W(# &amp;#34;fLaG Part &amp;#34; / fLaG Part 7: &amp;#39;ed_Th0}&amp;#39; fLaG Part 2: &amp;#39;m_rf_no_pr&amp;#39; char *secret = &amp;#34;fLaG Part 7: \&amp;#39;ed_Th0}\&amp;#39;\n\nfLaG Part 2: \&amp;#39;m_rf_no_pr\&amp;#39;&amp;#34;; echo &amp;#34;fLaG Part 3: &amp;#39;eserve_roo&amp;#39;&amp;#34; echo &amp;#34;fLaG Part 5: &amp;#39;ht??_No_Er&amp;#39;&amp;#34; grep -rsa &amp;#34;fLaG Part &amp;#34; / rgrep -sa &amp;#34;fLaG Part &amp;#34; / # fLaG Part 6: &amp;#39;r0rs_4ll0w&amp;#39; # fLaG Part 1: &amp;#39;KashiCTF{r&amp;#39; # fLaG Part 4: &amp;#39;t_Am_1_Rig&amp;#39; echo &amp;#34;fLaG Part 5: &amp;#39;ht?</description>
+    </item>
+    
+  </channel>
+</rss>

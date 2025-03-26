@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSINT on Blog de Reyko</title>
+    <link>http://localhost:1313/writeups/categories/osint/</link>
+    <description>Recent content in OSINT on Blog de Reyko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Tue, 25 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/writeups/categories/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kashi CTF 2025 : kings | OSINT</title>
+      <link>http://localhost:1313/writeups/kashi-2025-kings/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/writeups/kashi-2025-kings/</guid>
+      <description>Clues:
+A photograph of a dagger/knife. The title &amp;ldquo;Kings&amp;rdquo; in plural, suggesting the challenge will involve multiple kings. The statement: &amp;ldquo;cosmic weapons&amp;rdquo; &amp;ldquo;example of such weapons on the net&amp;rdquo; &amp;ldquo;This ruler&amp;rsquo;s court artist&amp;rdquo; &amp;ldquo;drew the most accurate painting of a now extinct bird&amp;rdquo; Approach:
+Reverse Image Search:
+A reverse image search reveals that this dagger, made of cosmic materials, belonged to Tutankhamun, an Egyptian king. Research on the Extinct Bird:</description>
+    </item>
+    
+  </channel>
+</rss>
