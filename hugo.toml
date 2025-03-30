@@ -1,5 +1,4 @@
 baseURL = 'https://reyko.xyz/'
-CF_PAGES_URL = 'https://reyko.xyz/'
 languageCode = 'fr-fr'
 title = 'Blog de Reyko'
 theme = 'hello-friend-ng'
