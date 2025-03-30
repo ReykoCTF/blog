@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://reyko.xyz/'
 languageCode = 'fr-fr'
 title = 'Blog de Reyko'
 theme = 'hello-friend-ng'
