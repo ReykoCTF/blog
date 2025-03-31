@@ -2,7 +2,7 @@
 title: "NullCon 2025 : Bfail | Web-Crypto"
 date: 2025-03-25
 draft: false
-categories: ["Web"] ["Crypto"]
+categories: ["Web"]
 ctf: "NullCon 2025"
 challenge: "bfail"
 author: "Reyko"
