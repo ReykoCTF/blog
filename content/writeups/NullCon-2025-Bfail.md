@@ -1,5 +1,5 @@
 ---
-title: "NullCon 2025 : Bfail | Web / Crypto"
+title: "NullCon 2025 : Bfail | Web-Crypto"
 date: 2025-03-25
 draft: false
 categories: ["Web"] ["Crypto"]
