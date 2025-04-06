@@ -15,3 +15,5 @@ Then :
 ```
 find . -type f -exec strings {} \; | grep -E '.*Kashi.*'
 ```
+
+Repo des challenges : https://github.com/IIT-BHU-CyberSec/Kashi-CTF-2025

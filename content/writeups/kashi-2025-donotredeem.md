@@ -42,3 +42,5 @@ Then search on the DB :
 1740251608654|839216 is your Amazon OTP. Don't share it with anyone.
 
 ```
+
+Repo des challenges : https://github.com/IIT-BHU-CyberSec/Kashi-CTF-2025

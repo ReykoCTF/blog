@@ -33,3 +33,5 @@ fLaG Part 7: 'ed_Th0}'
 fLaG Part 2: 'm_rf_no_pr'
 # Kernel image management overrides fLaG Part 4: 't_Am_1_Rig'
 ```
+
+Repo des challenges : https://github.com/IIT-BHU-CyberSec/Kashi-CTF-2025

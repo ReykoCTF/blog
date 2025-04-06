@@ -43,3 +43,6 @@ author: "Reyko"
 - [Meteoric Iron Dagger of Emperor Jahangir](https://the-halfbreed-hobbit.tumblr.com/post/145853925706/meteoric-iron-dagger-of-emperor-jahangir-dated)
 - [Ustad Mansur](https://fr.wikipedia.org/wiki/Ustad_Mansur)
 - [Hermitage Museum](https://www.google.com/maps/place/Musée+de+l'Ermitage/@59.9398317,30.3119848,630m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4696310b32cbe2e9:0x74e032aa0505dfc!8m2!3d59.9398317!4d30.3145597!16zL20vMDE3cXlr?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D)
+
+
+Repo des challenges : https://github.com/IIT-BHU-CyberSec/Kashi-CTF-2025

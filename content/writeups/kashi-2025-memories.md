@@ -15,4 +15,7 @@ strings chall | grep KashiCTF{
 
 Flag :
 KashiCTF{DF1R_g03555_Brrrr}
+```
 
+
+Repo des challenges : https://github.com/IIT-BHU-CyberSec/Kashi-CTF-2025
