@@ -1,5 +1,5 @@
 ---
-title: "Auvergn'Hack 2025 : Sifaka"
+title: "Auvergn'Hack 2025 : Sifaka | Hardware"
 date: 2025-04-06
 draft: false
 categories: ["Hardware"]
