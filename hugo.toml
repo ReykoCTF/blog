@@ -1,6 +1,6 @@
 baseURL = 'https://reyko.xyz/'
 languageCode = 'fr-fr'
-title = 'Blog de Reyko'
+title = 'Reyko'
 theme = 'hello-friend-ng'
 defaultContentLanguage = "fr"
 
