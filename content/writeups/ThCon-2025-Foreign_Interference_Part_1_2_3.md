@@ -56,20 +56,26 @@ It seems like you have found a passphrase ("god save the king"), and a locker ! 
 
 Part 1 :
 
+```bash
 $ steghide extract -sf national_anthem.wav
+```
 
 Aucun mot de passe n'est requis, cette commande recover le fichier "youlost" :
 
+```bash
 $ ls -hail youlost
 total 16K
 6291928 drwxr-xr-x 2 1000 rvm 4.0K Jan  3 12:18 .
 6291908 drwxrws--- 3 root 993 4.0K Apr 12 17:36 ..
 6291929 -rw-r--r-- 1 1000 rvm  159 Jan  3 11:55 flag.md
 6291930 -rwxrwxrwx 1 1000 rvm 2.4K Jan  3 11:49 kings_locker.kdbx
+```
 
+```bash
 $ cat flag.md
 You need the passphrase to open the locker (only lowercase letter, with spaces)
 But here's a first flag for you : THC{1t_c4n'7_b3_th3_NUSA_th3y_h4v3_n0_k1ng5}
+```
 
 THC{1t_c4n'7_b3_th3_NUSA_th3y_h4v3_n0_k1ng5} est donc le flag de la partie 1.
 

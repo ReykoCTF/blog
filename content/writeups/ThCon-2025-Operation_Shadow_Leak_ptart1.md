@@ -29,4 +29,6 @@ https://filesender.renater.fr/?s=download&token=ce51db62-6fe7-4e94-b608-60c7671e
 
 Just grep :) :
 
+```bash
 find . -type f -exec strings {} \; | grep -E '.*THC{.*
+```
